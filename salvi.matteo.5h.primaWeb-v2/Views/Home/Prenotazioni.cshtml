@@ -1,0 +1,27 @@
+@model dbContext
+@{
+    ViewData["Title"] = "Prenotazioni";
+}
+<center>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Città</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+@{
+    foreach(var item in @Model.Utenti)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Cognome</td>
+            <td>@item.Città</td>
+            <td>@item.Email</td>
+        </tr>
+    }
+}
+</table>
+</center>

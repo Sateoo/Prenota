@@ -1,0 +1,38 @@
+﻿@model salvi.matteo.prenota._5h.Models.Utente
+
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<h2>Modulo di prenotazione</h2>
+<p>Riempi il modulo </p>
+<form asp-controller="Home" asp-action="Prenotato" method="post">
+  <div class="form-group">
+    <label asp-for="Nome"></label>
+    <input type="text" asp-for="Nome" class="form-control" />
+    <span asp-validation-for="Nome" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Cognome"></label>
+    <input type="text" asp-for="Cognome" class="form-control" />
+    <span asp-validation-for="Cognome" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Città"></label>
+    <select type="text" asp-for="Città" class="form-control">
+      <option>rimini</option>
+      <option>bologna</option>
+      <option>Milano</option>
+    </select>
+    <span asp-validation-for="Città" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Email"></label>
+    <textarea asp-for="Email" class="form-control"></textarea>
+    <span asp-validation-for="Email" />
+  </div>
+  <div class="form-group">
+    <div asp-validation-summary="All"></div>
+    <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-send"></i> Prenota</button>
+  </div>
+</form>
